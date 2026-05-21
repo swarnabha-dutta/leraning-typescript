@@ -1,0 +1,1 @@
+function HelloGreet(person:string):string
