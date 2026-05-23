@@ -1,0 +1,9 @@
+function getChai(kind: string | number) {
+    if (typeof kind === "string") {
+        return `type is ${kind}`;
+    }
+    return `type is ${kind}`;
+}
+
+
+
