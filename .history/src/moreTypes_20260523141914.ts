@@ -1,0 +1,68 @@
+let response: any = "42";
+
+// ForceFully Type Assertion
+let numericLength: number = (response as string).length;
+
+type Book = {
+    name:string,
+}
+
+let bookString = '{"name":"one thing"}';
+let bookObject = JSON.parse(bookString) as Book;
+
+console.log(bookObject.name);
+
+
+const inputElement = document.getElementById("username") as HTMLInputElement;
+
+
+
+let value: any;
+
+value = "cnajkc";
+value = [1, 34, 5];
+value = 2.3
+
+
+value.toUpperCase();
+
+
+
+
+let newValue: unknown;
+
+newValue = "cnajkc";
+newValue = [1, 34, 5];
+newValue = 2.3
+
+if (typeof newValue === "string") {
+    newValue.toUpperCase();
+}
+
+try { /* empty */ } catch (error) {
+        if (error instanceof Error) {
+            console.log(error.message);
+        }
+        console.log("Error", error);
+    }
+
+
+    let data: unknown = "chai aur code";
+    const strData: string = data as string;
+
+
+type Role = "admin" | "user";
+    
+
+function redirectBasedOnRole(role: Role): void{
+    if (role === "admin") {
+        console.log("Redirect to admin dashboard");
+        return;
+    }
+
+    if (role === "user") {
+        console.log("Redirect to admin dashboard");
+        return;
+    }
+    
+}
